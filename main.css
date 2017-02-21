@@ -1,11 +1,11 @@
 * {
     text-align: center;
-    background-color: 	#1a1a1a;
-    color: #d9d9d9;
 }
 
 body{
     font-family: 'Press Start 2P';
+    background-color: #1a1a1a;
+    color: #d9d9d9;
 }
 
 .page-title {
