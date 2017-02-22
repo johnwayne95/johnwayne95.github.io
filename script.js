@@ -1,4 +1,4 @@
 $(document).ready(function(){
-    $('div').hide();
+    alert( "Thanks for visiting!" );
 });
 
