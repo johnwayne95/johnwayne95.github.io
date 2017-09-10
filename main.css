@@ -1,9 +1,9 @@
 * {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
-    font-family: 'Lato';
     background-color: #1a1a1a;
     color: #d9d9d9;
 }
