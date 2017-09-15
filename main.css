@@ -10,7 +10,7 @@ html {
 }
 
 body {
-   /* background-color: #1a1a1a;*/   
+   background-color: #1a1a1a;   
     color: #d9d9d9;
     margin: 0;
 }
@@ -52,5 +52,6 @@ canvas {
     top: 0;
     left: 0;
     z-index: -9999;
+    background-color: #1a1a1a; 
 }
 
