@@ -5,16 +5,16 @@ var scene = new THREE.Scene(),
       renderer.setSize(window.innerWidth, window.innerHeight); 
       document.body.appendChild(renderer.domElement); 
       var ico = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(2.75,1),
+                new THREE.IcosahedronGeometry(2.8,1),
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xDA5454}
             )); 
 
        var ico2 = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(1.75,0),
+                new THREE.IcosahedronGeometry(1.8,0),
                 new THREE.MeshPhongMaterial({color: 0xBC2B2B}
             )); 
 
-      var light = new THREE.SpotLight(0xffffe6, 1.25, 100, Math.PI/3, 0, 2);
+      var light = new THREE.SpotLight(0xffffe6, 1.5, 100, Math.PI/3, 0, 2);
       light.position.set(0.5, 0.5, 10);
       scene.fog = new THREE.Fog(0x1a1a1a, 0, 7.5);
       scene.add(light);
