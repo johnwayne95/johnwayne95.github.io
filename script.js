@@ -1,67 +1,24 @@
-var scene;
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
-var camera;
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
 
-initializeScene();
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
 
-renderScene();
+			camera.position.z = 5;
 
-function initializeScene() {
-    if(Detector.webgl) {
-        renderer = new THREE.WebGLRenderer({antialias:true});
-    } else {
-        renderer = new THREE.CanvasRenderer();
-    }
+			var animate = function () {
+				requestAnimationFrame( animate );
 
-    renderer.setClearColor(0x000000, 1);
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
 
-    canvasWidth = window.innerWidth;
-    canvasHeight = window.innerHeight;
+				renderer.render(scene, camera);
+			};
 
-    renderer.setsize(canvasWidth, canvasHeight);
-
-    document.getElementById("WebGLCanvas").appendChild(renderer.domElement);
-
-    scene = new THREE.Scene();
-
-    camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 1, 100);
-    camera.position.set(0, 0, 10);
-    camera.lookAt(scene.position); 
-    scene.add(camera);
-
-    var triangleGeometry = new THREE.Geometry(); 
-    triangleGeometry.vertices.push(new THREE.Vector3( 0.0,  1.0, 0.0)); 
-    triangleGeometry.vertices.push(new THREE.Vector3(-1.0, -1.0, 0.0)); 
-    triangleGeometry.vertices.push(new THREE.Vector3( 1.0, -1.0, 0.0)); 
-    triangleGeometry.faces.push(new THREE.Face3(0, 1, 2));
-
-    var triangleMaterial = new THREE.MeshBasicMaterial({ 
-        color:0xFFFFFF, 
-        side:THREE.DoubleSide 
-    });
-
-    var triangleMesh = new THREE.Mesh(triangleGeometry, triangleMaterial); 
-    triangleMesh.position.set(-1.5, 0.0, 4.0);
-    scene.add(triangleMesh);
-
-    var squareGeometry = new THREE.Geometry(); 
-    squareGeometry.vertices.push(new THREE.Vector3(-1.0,  1.0, 0.0)); 
-    squareGeometry.vertices.push(new THREE.Vector3( 1.0,  1.0, 0.0)); 
-    squareGeometry.vertices.push(new THREE.Vector3( 1.0, -1.0, 0.0)); 
-    squareGeometry.vertices.push(new THREE.Vector3(-1.0, -1.0, 0.0)); 
-    squareGeometry.faces.push(new THREE.Face3(0, 1, 2)); 
-    squareGeometry.faces.push(new THREE.Face3(0, 2, 3)); 
-
-    var squareMaterial = new THREE.MeshBasicMaterial({ 
-        color:0xFFFFFF, 
-        side:THREE.DoubleSide 
-    });
-
-    var squareMesh = new THREE.Mesh(squareGeometry, squareMaterial); 
-        squareMesh.position.set(1.5, 0.0, 4.0); 
-        scene.add(squareMesh); 
-}
-
-function renderScene() {
-    renderer.render(scene, camera);
-}
+			animate();
