@@ -33,8 +33,10 @@ var scene = new THREE.Scene(),
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
         ico2.rotation.z -= 0.003;
+        renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.render(scene, camera); 
       }; 
       render();
+
 
 //END OF THREE.JS
