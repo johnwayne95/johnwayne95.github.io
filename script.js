@@ -37,15 +37,29 @@ var scene = new THREE.Scene(),
       }; 
       render();
 
-window.addEventListener( 'resize', onWindowResize, false );
-
 //This stuff is for when the window is resized (also better on mobile)
+window.addEventListener( 'resize', onWindowResize, false );
 function onWindowResize(){
-
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-
     renderer.setSize( window.innerWidth, window.innerHeight );
-
 }
 //END OF THREE.JS
+
+//AUDIO BUTTON
+var audiobutton = document.getElementById('audiobutton');
+var audio = document.getElementById('audio');
+
+function audioButton() {
+    if(audiobutton.classList.contains('play')) {
+         audiobutton.src = './icons/pause.png';
+         audiobutton.classList.add('pause');
+         audiobutton.classList.remove('play');
+         audio.play();
+    } else {
+        audiobutton.src = './icons/play.png';
+        audiobutton.classList.add('play');
+        audiobutton.classList.remove('pause');
+        audio.pause();
+    }
+}

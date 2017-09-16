@@ -33,6 +33,7 @@ h2 {
     height: 100%;
     width: 100%;
     text-align: center;
+    z-index: -900
 }
 
 .middle {
@@ -68,19 +69,9 @@ canvas {
     width: 40px;
 }
 
-.audio-icon {
+#audiobutton {
     margin: 30px;
     height: 35px;
     width: 35px;
+    cursor: pointer;
 }
-
-.arrow {
-    text-align: center;
-}
-
-.arrow img {
-    height: 45px;
-    width: 45px;
-    padding-top: 45%;
-}
-
