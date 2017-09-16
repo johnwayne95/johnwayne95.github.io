@@ -28,7 +28,8 @@ var scene = new THREE.Scene(),
       scene.add(ico); 
       scene.add(ico2);
       camera.position.z = 5;
-
+      
+      //these and stuff farther down were for only rotating when music was playing
       var rot1 = 0;
       var rot2 = 0;
 
