@@ -1,3 +1,5 @@
+//START OF THREE.JS
+
 var scene = new THREE.Scene(),
             camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 10)
             renderer = new THREE.WebGLRenderer( { alpha: true });  
@@ -34,3 +36,5 @@ var scene = new THREE.Scene(),
         renderer.render(scene, camera); 
       }; 
       render();
+
+//END OF THREE.JS
