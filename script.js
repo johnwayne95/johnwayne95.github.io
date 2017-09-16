@@ -5,16 +5,16 @@ var scene = new THREE.Scene(),
       renderer.setSize(window.innerWidth, window.innerHeight); 
       document.body.appendChild(renderer.domElement); 
       var ico = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(2.8,1),
-                new THREE.MeshPhongMaterial({wireframe: true, color: 0xDA5454}
+                new THREE.IcosahedronGeometry(3,1),
+                new THREE.MeshPhongMaterial({wireframe: true, color: 0xBB2C2C}
             )); 
 
        var ico2 = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(1.8,0),
-                new THREE.MeshPhongMaterial({color: 0xBC2B2B}
+                new THREE.IcosahedronGeometry(1.85,0),
+                new THREE.MeshPhongMaterial({color: 0x991313}
             )); 
 
-      var light = new THREE.SpotLight(0xffffe6, 1.5, 100, Math.PI/3, 0, 2);
+      var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
       light.position.set(0.5, 0.5, 10);
       scene.fog = new THREE.Fog(0x1a1a1a, 0, 7.5);
       scene.add(light);
@@ -25,9 +25,9 @@ var scene = new THREE.Scene(),
 
       var render = function () { 
         requestAnimationFrame(render); 
-        ico.rotation.x += 0.002; 
-        ico.rotation.y += 0.001;
-        ico.rotation.z += 0.002;
+        ico.rotation.x += 0.0006; 
+        ico.rotation.y += 0.0009;
+        ico.rotation.z += 0.0006;
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
         ico2.rotation.z -= 0.003;
