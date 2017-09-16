@@ -1,30 +1,38 @@
 //START OF THREE.JS
 
+//creating scene and renderer, don't mess with this too much
 var scene = new THREE.Scene(),
             camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 10)
             renderer = new THREE.WebGLRenderer( { alpha: true }, {antialias: true});  
 
       renderer.setSize(window.innerWidth, window.innerHeight); 
       document.body.appendChild(renderer.domElement); 
+    //first icosahedron, the large wire one
       var ico = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(3,1), 
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
-
+    //second isocahedron, smaller solid one
        var ico2 = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(1.85,0), 
                 new THREE.MeshPhongMaterial({color: 0xBB2C2C}
             )); 
 
+    //make things look dynamic (lights and fog)
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
       light.position.set(0.5, 0.5, 10);
       scene.fog = new THREE.Fog(0x1a1a1a, 0, 7.5);
       scene.add(light);
 
+      //add elements to scene
       scene.add(ico); 
       scene.add(ico2);
       camera.position.z = 5;
 
+      var rot1 = 0;
+      var rot2 = 0;
+
+      //render the scene and do stuff during it
       var render = function () { 
         requestAnimationFrame(render); 
         ico.rotation.x += 0.0006; 
@@ -32,12 +40,18 @@ var scene = new THREE.Scene(),
         ico.rotation.z += 0.0006;
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
-        ico2.rotation.z -= 0.003;
+        ico2.rotation.z -= 0.003; 
+        /*ico.rotation.x += rot1; 
+        ico.rotation.y += rot1;
+        ico.rotation.z += rot1;
+        ico2.rotation.x -= rot2; 
+        ico2.rotation.y -= rot2;
+        ico2.rotation.z -= rot2;*/
         renderer.render(scene, camera); 
       }; 
       render();
 
-//This stuff is for when the window is resized (also better on mobile)
+//for when the window is resized (also better on mobile)
 window.addEventListener( 'resize', onWindowResize, false );
 function onWindowResize(){
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -56,10 +70,16 @@ function audioButton() {
          audiobutton.classList.add('pause');
          audiobutton.classList.remove('play');
          audio.play();
+         //these are for the three.js shit we're not doing
+         rot1 = 0.0009;
+         rot2 = 0.003;
     } else {
         audiobutton.src = './icons/play.png';
         audiobutton.classList.add('play');
         audiobutton.classList.remove('pause');
         audio.pause();
+        rot1 = 0;
+        rot2 = 0;
     }
 }
+//END OF AUDIO
