@@ -64,8 +64,8 @@ canvas {
 
 .sidebar-icon {
     margin: 20px;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
 }
 
 .audio-icon {
@@ -76,5 +76,11 @@ canvas {
 
 .arrow {
     text-align: center;
+}
+
+.arrow img {
+    height: 45px;
+    width: 45px;
+    padding-top: 45%;
 }
 
