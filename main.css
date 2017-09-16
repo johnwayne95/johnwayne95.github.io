@@ -33,8 +33,10 @@ h2 {
     height: 100%;
     width: 100%;
     text-align: center;
-    z-index: -900
+    z-index: 0;
 }
+
+
 
 .middle {
     display: table-cell;
@@ -70,8 +72,12 @@ canvas {
 }
 
 #audiobutton {
-    margin: 30px;
+    /*margin: 30px;*/
     height: 35px;
     width: 35px;
     cursor: pointer;
+    position: absolute;
+    left:96%;
+    top: 30px;
+    z-index: 10;
 }
