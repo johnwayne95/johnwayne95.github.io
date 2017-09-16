@@ -33,12 +33,19 @@ var scene = new THREE.Scene(),
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
         ico2.rotation.z -= 0.003;
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.render(scene, camera); 
       }; 
       render();
 
+window.addEventListener( 'resize', onWindowResize, false );
 
+//This stuff is for when the window is resized (also better on mobile)
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
 //END OF THREE.JS
