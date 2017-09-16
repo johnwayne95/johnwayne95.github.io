@@ -6,12 +6,12 @@ var scene = new THREE.Scene(),
       document.body.appendChild(renderer.domElement); 
       var ico = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(3,1),
-                new THREE.MeshPhongMaterial({wireframe: true, color: 0xBB2C2C}
+                new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
 
        var ico2 = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(1.85,0),
-                new THREE.MeshPhongMaterial({color: 0x991313}
+                new THREE.MeshPhongMaterial({color: 0xBB2C2C}
             )); 
 
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
