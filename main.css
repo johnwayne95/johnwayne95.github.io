@@ -1,23 +1,18 @@
 * {
-    text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 
-html {
-   margin: 0px;
-   height: 100%;
-   width: 100%;
-}
 
 body {
     background-color: #1a1a1a; 
     color: #d9d9d9;
     margin: 0;
+    overflow: hidden;
 }
 
 h1 {
     font-size: 150px;
-    font-weight: lighter;
     letter-spacing: 15px;
     padding: 0px;
     margin: 0px;
@@ -27,7 +22,6 @@ h1 {
 
 h2 {
     font-size: 22px;
-    font-weight: lighter;
     letter-spacing: 30px;
     padding: 0px;
     margin: 0px;
@@ -38,6 +32,7 @@ h2 {
     position: absolute;
     height: 100%;
     width: 100%;
+    text-align: center;
 }
 
 .middle {
@@ -65,5 +60,21 @@ canvas {
     top: 0;
     left: 0;
     z-index: -9999; 
+}
+
+.sidebar-icon {
+    margin: 20px;
+    height: 45px;
+    width: 45px;
+}
+
+.audio-icon {
+    margin: 30px;
+    height: 35px;
+    width: 35px;
+}
+
+.arrow {
+    text-align: center;
 }
 

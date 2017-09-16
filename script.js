@@ -7,12 +7,12 @@ var scene = new THREE.Scene(),
       renderer.setSize(window.innerWidth, window.innerHeight); 
       document.body.appendChild(renderer.domElement); 
       var ico = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(3,1),
+                new THREE.IcosahedronGeometry(3,1), 
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
 
        var ico2 = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(1.85,0),
+                new THREE.IcosahedronGeometry(1.85,0), 
                 new THREE.MeshPhongMaterial({color: 0xBB2C2C}
             )); 
 
