@@ -1,3 +1,4 @@
+
 //START OF THREE.JS
 var audiobutton = document.getElementById('audiobutton');
 var audio = document.getElementById('audio');
@@ -66,6 +67,7 @@ function audioButton() {
          audiobutton.classList.add('pause');
          audiobutton.classList.remove('play');
          audio.play();
+         ico2.ico2Mesh.color.setStyle("cyan");
     } else {
         audiobutton.src = './icons/play.png';
         audiobutton.classList.add('play');
