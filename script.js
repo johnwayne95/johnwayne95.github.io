@@ -43,9 +43,6 @@ var scene = new THREE.Scene(),
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
         ico2.rotation.z -= 0.003;
-        if(audiobutton.classList.contains('pause')){
-            ico2.ico2Mesh.color.setHex( 0xffffff );
-        }
         renderer.render(scene, camera);
       }; 
       render();
