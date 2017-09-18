@@ -34,7 +34,7 @@ var scene = new THREE.Scene(),
 
 
       function audioButton() {
-             ico2.ico2Mesh.color.setStyle("cyan");
+             ico2.ico2Mesh.ico2Color.setHex(0xfa97ff);
             if(audiobutton.classList.contains('play')) {
                     audiobutton.src = './icons/pause.png';
                     audiobutton.classList.add('pause');
