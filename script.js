@@ -32,23 +32,6 @@ var scene = new THREE.Scene(),
       scene.add(ico2);
       camera.position.z = 5;
 
-
-      function audioButton() {
-             ico2.ico2Mesh.ico2Color.setHex(0xfa97ff);
-            if(audiobutton.classList.contains('play')) {
-                    audiobutton.src = './icons/pause.png';
-                    audiobutton.classList.add('pause');
-                    audiobutton.classList.remove('play');
-                    audio.play();
-
-               } else {
-                    audiobutton.src = './icons/play.png';
-                     audiobutton.classList.add('play');
-                      audiobutton.classList.remove('pause');
-                    audio.pause();
-                 }
-            }
-
       //render the scene and do stuff during it
       var render = function () { 
         requestAnimationFrame(render); 
@@ -74,7 +57,20 @@ function onWindowResize(){
 //END OF THREE.JS
 
 //AUDIO BUTTON
+      function audioButton() {
+            if(audiobutton.classList.contains('play')) {
+                    audiobutton.src = './icons/pause.png';
+                    audiobutton.classList.add('pause');
+                    audiobutton.classList.remove('play');
+                    audio.play();
 
+               } else {
+                    audiobutton.src = './icons/play.png';
+                     audiobutton.classList.add('play');
+                      audiobutton.classList.remove('pause');
+                    audio.pause();
+                 }
+            }
 
 
 //END OF AUDIO
