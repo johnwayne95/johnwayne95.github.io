@@ -21,7 +21,6 @@ var scene = new THREE.Scene(),
        var ico2 = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(1.85,0), 
                 ico2Mesh); 
-
     //make things look dynamic (lights and fog)
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
       light.position.set(0.5, 0.5, 10);
@@ -43,6 +42,7 @@ var scene = new THREE.Scene(),
         ico2.rotation.x -= 0.003; 
         ico2.rotation.y -= 0.002;
         ico2.rotation.z -= 0.003;
+        ico2.ico2Mesh.color.setHex(0xFA97FF);
         renderer.render(scene, camera);
       }; 
       render();
