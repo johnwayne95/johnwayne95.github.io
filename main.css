@@ -12,7 +12,8 @@ body {
 }
 
 h1 {
-    font-size: 150px;
+    font-size: 940%;
+    /*font-size: 150px;*/
     letter-spacing: 15px;
     padding: 0px;
     margin: 0px;
@@ -21,7 +22,8 @@ h1 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 140%;
+    /*font-size: 22px;*/
     letter-spacing: 30px;
     padding: 0px;
     margin: 0px;
