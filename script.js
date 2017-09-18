@@ -31,7 +31,6 @@ var scene = new THREE.Scene(),
       scene.add(ico); 
       scene.add(ico2);
       camera.position.z = 5;
-              ico2.ico2Mesh.color.setHex(0xFA97FF);
 
       //render the scene and do stuff during it
       var render = function () { 
