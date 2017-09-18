@@ -1,4 +1,3 @@
-
 //START OF THREE.JS
 var audiobutton = document.getElementById('audiobutton');
 var audio = document.getElementById('audio');
@@ -33,6 +32,14 @@ var scene = new THREE.Scene(),
       scene.add(ico2);
       camera.position.z = 5;
 
+            //TEST STUFF
+      document.getElementById("audiobutton").onclick = function() {colorChange()};
+
+      function colorChange() {
+            ico2.ico2Mesh.color.setHex(0xfa97ff);
+          }
+            //END TEST STUFF
+
       //render the scene and do stuff during it
       var render = function () { 
         requestAnimationFrame(render); 
@@ -54,7 +61,6 @@ function onWindowResize(){
     renderer.setSize( window.innerWidth, window.innerHeight );
 }
 
-//COLOR TRANSITION DURING MUSIC
 
 //END OF THREE.JS
 
