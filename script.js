@@ -15,11 +15,10 @@ var scene = new THREE.Scene(),
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
     //second isocahedron, smaller solid one
-       var hslColor = 0;
        var ico2Color = new THREE.Color('hsl(0, 62%, 45%)');
        var ico2Mesh = new THREE.MeshPhongMaterial({color: ico2Color});
        var ico2 = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(1.85,0), 
+                new THREE.IcosahedronGeometry(2,0), 
                 ico2Mesh); 
     //make things look dynamic (lights and fog)
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
