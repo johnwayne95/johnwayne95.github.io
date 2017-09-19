@@ -73,3 +73,9 @@ function onWindowResize(){
 
 
 //END OF AUDIO
+
+//START SIDEBAR
+function openNav() {
+  document.getElementById("openSideBar").style.height = "100%";
+}
+//END SIDEBAR
