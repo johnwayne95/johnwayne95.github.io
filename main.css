@@ -67,14 +67,14 @@ canvas {
     z-index: -9999; 
 }
 
-.sidebar-button {
+#sidebar-button {
     margin: 20px;
     height: 50px;
     width: 50px;
     cursor: pointer;
 }
 
-.sidebar-button-div {
+#sidebar-button-div {
     position: absolute;
     width: 80px;
     z-index: 10;
@@ -93,7 +93,7 @@ canvas {
     filter: brightness(150%);
 }
 
- .sidebar-button:hover{
+ #sidebar-button:hover{
     filter: brightness(150%);
 }
 
