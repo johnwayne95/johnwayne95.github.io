@@ -3,12 +3,18 @@
     font-weight: 200;
 }
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+}
 
 body {
     background-color: #1a1a1a;
     color: #d9d9d9;
     margin: 0;
-    overflow: hidden;
 }
 
 h1 {
