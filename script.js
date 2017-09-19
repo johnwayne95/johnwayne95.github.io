@@ -11,7 +11,7 @@ var scene = new THREE.Scene(),
       document.body.appendChild(renderer.domElement); 
     //first icosahedron, the large wire one
       var ico = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(3,1), 
+                new THREE.IcosahedronGeometry(3,1),
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
     //second isocahedron, smaller solid one
@@ -24,7 +24,7 @@ var scene = new THREE.Scene(),
     //make things look dynamic (lights and fog)
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
       light.position.set(0.5, 0.5, 10);
-      scene.fog = new THREE.Fog(0x1a1a1a, 0, 7.5);
+      scene.fog = new THREE.Fog(0x1a1a1a, 0, 8.5);
       scene.add(light);
 
       //add elements to scene
