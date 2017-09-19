@@ -81,10 +81,12 @@ function openNav() {
       document.getElementById("openSideBar").style.height = "100%";
       sidebarButton.src = './icons/close.png';
       sidebarButton.classList.remove('open');
+      sidebarButton.classList.add('close');
     } else {
       document.getElementById("openSideBar").style.height = "0";
       sidebarButton.src = './icons/menu.png';
       sidebarButton.classList.add('open');
+      sidebarButton.classList.remove('close'); 
     }
 }
 
