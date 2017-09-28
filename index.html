@@ -4,25 +4,27 @@
   <head>
     <title>TR&Eacute; WAYNE</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width"> 
     <link rel="icon" href="./icons/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   
   <body>
-<!--EXPANDING SIDEBAR-->
-    <div id="sidebar-button-div">
-        <img src = "./icons/menu.png" id = "sidebar-button" class="open" align="left" onclick="openNav()">
-      </div>
-    <div class="sidebar-opened" id="openSideBar">
-      <a href="" target=""><img src = "./icons/code.png" class = "sidebar-icon" align="left"></a>
-      <a href="./pictures/Resume.pdf" target="_blank"><img src="./icons/note.png" class = "sidebar-icon" alt="Resume"></a>
-      <a href="mailto:me@trewayne.com" target="_top"><img src="./icons/mail.png" class = "sidebar-icon" alt="Email" title="Email"></a>
-      <a href="https://github.com/johnwayne95" target="_blank"><img src="./icons/github.png" class = "sidebar-icon" alt="Github"></a>
-      <a href="https://www.linkedin.com/in/john-wayne-8502b412b/" target="_blank"><img src="./icons/linkedin.png" class = "sidebar-icon" alt="LinkedIn"></a>
-    </div>
+
+<!--TOP NAVBAR-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+  </div>
+</nav>
+
 <!--MUSIC STUFF-->
     <audio loop id="audio">
       <source src="./music/musictest.mp3" type="audio/mpeg">
@@ -30,17 +32,67 @@
 
       <img src = "./icons/play.png" id = "audiobutton" class="play" onclick="audioButton()" align="right">
 <!--NAME AND SOCIAL MEDIA-->
+<div class="opening-page">
       <div class="outer">
         <div class="middle">
           <div class="inner>">
             <h1>TR&Eacute;</h1>
             <h2>WAYNE</h2>
+            <div class="icons-div">
+              <a href="https://github.com/johnwayne95" target="_blank"><img src="./icons/github.png" class = "icon" alt="Github"></a>
+               <a href="https://www.linkedin.com/in/john-wayne-8502b412b/" target="_blank"><img src="./icons/linkedin.png" class = "icon" alt="LinkedIn"></a>
+            </div>
         </div>
       </div>
     </div>
 
+</div>
+
+<!--About me Page -->
+<div class="about-me" id="about">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        <p class="hey">HEY.</p>
+      </div>
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO PAGE -->
+<div class="portfolio" id="portfolio">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        <p class="folio">PORTFOLIO.</p>
+      </div>
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        <p class = "folio-text">None here yet, come back soon for updates!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="contact" id="contact">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        <p class="talk">LET'S TALK.</p>
+      </div>
+      <div class = "col-sm-6 col-md-6 col-lg-6">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
     <script src="three.min.js"></script>
-    <script src="jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src='script.js'></script>
 
   </body>

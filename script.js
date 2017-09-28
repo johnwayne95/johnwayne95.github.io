@@ -11,14 +11,14 @@ var scene = new THREE.Scene(),
       document.body.appendChild(renderer.domElement); 
     //first icosahedron, the large wire one
       var ico = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(3,1),
+                new THREE.IcosahedronGeometry(3.3,1),
                 new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
             )); 
     //second isocahedron, smaller solid one
        var ico2Color = new THREE.Color('hsl(0, 62%, 45%)');
        var ico2Mesh = new THREE.MeshPhongMaterial({color: ico2Color});
        var ico2 = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(2,0), 
+                new THREE.IcosahedronGeometry(2.3,0), 
                 ico2Mesh); 
     //make things look dynamic (lights and fog)
       var light = new THREE.SpotLight(0xffffe6, 1.6, 100, Math.PI/3, 0, 2);
@@ -34,12 +34,12 @@ var scene = new THREE.Scene(),
       //render the scene and do stuff during it
       var render = function () { 
         requestAnimationFrame(render); 
-        ico.rotation.x += 0.0006; 
-        ico.rotation.y += 0.0009;
-        ico.rotation.z += 0.0006;
-        ico2.rotation.x -= 0.003; 
-        ico2.rotation.y -= 0.002;
-        ico2.rotation.z -= 0.003;
+        ico.rotation.x += 0.0004; 
+        ico.rotation.y += 0.0007;
+        ico.rotation.z += 0.0004;
+        ico2.rotation.x -= 0.002; 
+        ico2.rotation.y -= 0.001;
+        ico2.rotation.z -= 0.002;
         renderer.render(scene, camera);
       }; 
       render();
@@ -74,20 +74,56 @@ function onWindowResize(){
 
 //END OF AUDIO
 
-//START SIDEBAR
-var sidebarButton = document.getElementById("sidebar-button");
-function openNav() {
-    if(sidebarButton.classList.contains('open')) {
-      document.getElementById("openSideBar").style.height = "100%";
-      sidebarButton.src = './icons/close.png';
-      sidebarButton.classList.remove('open');
-      sidebarButton.classList.add('close');
-    } else {
-      document.getElementById("openSideBar").style.height = "0";
-      sidebarButton.src = './icons/menu.png';
-      sidebarButton.classList.add('open');
-      sidebarButton.classList.remove('close'); 
-    }
-}
+//SCROLL SMOOTHNESS 
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-//END SIDEBAR
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 650, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+
+
+//CHANGE NAVBAR COLOR WHEN SCROLL
+var about = $('.about-me').offset().top;
+var portfolio = $('.portfolio').offset().top;
+var contact = $('.contact').offset().top;
+var navbar = $('.nav.navbar-nav.navbar-right li a');
+
+$(document).scroll(function() {
+  if ($(window).scrollTop() >= about && $(window).scrollTop() < portfolio) {
+  	navbar.css('color', '#1a1a1a');
+    about.css('position','fixed');
+  } else if ($(window).scrollTop() >= portfolio && $(window).scrollTop() < contact) {
+    navbar.css('color', '#d9d9d9');
+  } else if($(window).scrollTop() >= contact) {
+    navbar.css('color', '#1a1a1a');
+  } else {
+    navbar.css('color', '#d9d9d9');
+  }
+});

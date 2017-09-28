@@ -17,19 +17,27 @@ body {
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
+.opening-page {
+    height: 100%;
+}
+
 h1 {
-    font-size: 940%;
+    font-size: 1100%;
     /*font-size: 150px;*/
-    letter-spacing: 15px;
+    letter-spacing: 20px;
     padding: 0px;
     margin: 0px;
     line-height: 120px;
-    text-indent: 15px;
+    text-indent: 20px;
 }
 
 
 h2 {
-    font-size: 140%;
+    font-size: 220%;
     /*font-size: 22px;*/
     letter-spacing: 30px;
     padding: 0px;
@@ -67,61 +75,93 @@ canvas {
     z-index: -9999; 
 }
 
-#sidebar-button {
-    cursor: pointer;
+.icon {
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
-.open {
-    margin: 20px;
-    height: 50px;
-    width: 50px;
-}
 
-.close {
-    margin: 25px;
-    height: 40px;
-    width: 40px;
-}
-
-#sidebar-button-div {
-    position: absolute;
-    width: 80px;
-    z-index: 10;
-}
-
-.sidebar-icon {
-    height: 40px;
-    width: 40px;
-    margin-left: 25px;
-    margin-top: 40%;
-    margin-bottom: 40%;
-}
-
-.sidebar-icon:hover{
-    filter: brightness(150%);
-}
-
- #sidebar-button:hover{
+icon:hover{
     filter: brightness(150%);
 }
 
 #audiobutton {
-    margin: 25px;
+    margin: 30px;
     height: 35px;
     width: 35px;
     cursor: pointer;
+    position: fixed;
+    float: left;
+    z-index: 9999;
+}
+
+#audiobutton:hover {
+    filter: brightness(150%);
+}
+
+/*NAVBAR STYLING*/
+
+.navbar {
+    margin-bottom: 0;
+    background-color: transparent;
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 2 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+.navbar li {
+    margin-left: 15px;
+    margin-right: 40px;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: #d9d9d9;
+}
+
+.navbar-nav li a:hover{
+    filter: brightness(400%);
+}
+
+/*ABOUT ME STYLING*/
+.about-me {
+    height: 100%;
+    background-color: #d9d9d9;
+    color: #1a1a1a;
     position: relative;
-    float: right;
-    z-index: 10;
+    z-index: 995;
 }
 
-.sidebar-opened {
-    margin-top: 90px;
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 80px;
-    z-index: 10;
-    transition: 0.75s;
+.hey, .talk, .folio {
+    text-align: center;
+    font-size: 500%;
+    margin-top: 50%;
 }
 
+.folio-text {
+    text-align: center;
+    font-size: 200%;
+    margin-top: 50%;
+}
+
+.portfolio {
+    height: 100%;
+    color: #d9d9d9;
+    background-color: #1a1a1a;
+    position: relative;
+    z-index: 996;
+}
+
+.contact {
+    height: 100%;
+    background-color: #d9d9d9;
+    color: #1a1a1a;
+    position: relative;
+    z-index: 997;
+}
