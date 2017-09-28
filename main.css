@@ -155,15 +155,15 @@ icon:hover{
 
 /*PORTFOLIO STYLING*/
 .folio {
-    text-align: center;
+    text-align: left;
     font-size: 650%;
     margin-top: 50%;
+    line-height: 70%;
 
 }
 .folio-text {
-    text-align: center;
+    text-align: left;
     font-size: 200%;
-    margin-top: 50%;
 }
 
 .portfolio {
