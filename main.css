@@ -136,11 +136,14 @@ icon:hover{
 /*ABOUT ME STYLING*/
 .about-me {
     height: 100%;
+    width: 100%;
     background-color: #d9d9d9;
     color: #1a1a1a;
     position: relative;
     z-index: 995;
+    overflow: hidden;
 }
+
 
 .hey {
      text-align: left;
@@ -153,26 +156,39 @@ icon:hover{
     font-size: 200%;
 }
 
+.selfie {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    filter: grayscale(40%); 
+}
+
 /*PORTFOLIO STYLING*/
-.folio {
-    text-align: left;
-    font-size: 650%;
-    margin-top: 50%;
-    line-height: 70%;
-
-}
-.folio-text {
-    text-align: left;
-    font-size: 200%;
-}
-
 .portfolio {
     height: 100%;
     color: #d9d9d9;
     background-color: #1a1a1a;
     position: relative;
     z-index: 996;
+    padding-top: 30px;
 }
+.port-rows {
+    text-align: center;
+    width: 100%;
+}
+.port-styling {
+    margin-top: 6%;
+}
+.port-text {
+    font-size: 550%;
+}
+
+.webpic {
+    height: 35%;
+    width: 35%;
+}
+
+
 
 /*CONTACT STYLING*/
 .contact {
