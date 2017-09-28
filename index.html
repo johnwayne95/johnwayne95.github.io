@@ -29,10 +29,11 @@
     <audio loop id="audio">
       <source src="./music/musictest.mp3" type="audio/mpeg">
     </audio>
-
+<!--
       <img src = "./icons/play.png" id = "audiobutton" class="play" onclick="audioButton()" align="right">
+  -->
 <!--NAME AND SOCIAL MEDIA-->
-<div class="opening-page">
+<div class="opening-page" id="opening-page">
       <div class="outer">
         <div class="middle">
           <div class="inner>">
@@ -49,14 +50,16 @@
 </div>
 
 <!--About me Page -->
-<div class="about-me" id="about">
+<div class="about-me" id="about" data-spy="affix-top">
   <div class = "container">
     <div class = "row">
       <div class = "col-sm-6 col-md-6 col-lg-6">
-        <p class="hey">HEY.</p>
+        
       </div>
       <div class = "col-sm-6 col-md-6 col-lg-6">
-        
+        <p class="hey">HEY.</p>
+        <p class="what-i-am">I'm a website developer, web designer, and musician</p>
+        <p></p>
       </div>
     </div>
   </div>
@@ -84,7 +87,7 @@
         <p class="talk">LET'S TALK.</p>
       </div>
       <div class = "col-sm-6 col-md-6 col-lg-6">
-        
+        <div class = "email"><a href="mailto:me@trewayne.com" target="_top">me@trewayne.com</a></div>
       </div>
     </div>
   </div>

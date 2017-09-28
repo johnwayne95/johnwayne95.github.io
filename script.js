@@ -12,11 +12,10 @@ var scene = new THREE.Scene(),
     //first icosahedron, the large wire one
       var ico = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(3.3,1),
-                new THREE.MeshPhongMaterial({wireframe: true, color: 0xD65151}
+                new THREE.MeshPhongMaterial({wireframe: true, color: 0x9e3838}
             )); 
     //second isocahedron, smaller solid one
-       var ico2Color = new THREE.Color('hsl(0, 62%, 45%)');
-       var ico2Mesh = new THREE.MeshPhongMaterial({color: ico2Color});
+       var ico2Mesh = new THREE.MeshPhongMaterial({color: 0x942323});
        var ico2 = new THREE.Mesh(
                 new THREE.IcosahedronGeometry(2.3,0), 
                 ico2Mesh); 
@@ -113,17 +112,17 @@ function onWindowResize(){
 var about = $('.about-me').offset().top;
 var portfolio = $('.portfolio').offset().top;
 var contact = $('.contact').offset().top;
-var navbar = $('.nav.navbar-nav.navbar-right li a');
+var navbarText = $('.nav.navbar-nav.navbar-right li a');
+var navbar = $('.navbar');
 
 $(document).scroll(function() {
   if ($(window).scrollTop() >= about && $(window).scrollTop() < portfolio) {
-  	navbar.css('color', '#1a1a1a');
-    about.css('position','fixed');
+  	navbarText.css('color', '#1a1a1a');
   } else if ($(window).scrollTop() >= portfolio && $(window).scrollTop() < contact) {
-    navbar.css('color', '#d9d9d9');
+    navbarText.css('color', '#d9d9d9');
   } else if($(window).scrollTop() >= contact) {
-    navbar.css('color', '#1a1a1a');
+    navbarText.css('color', '#1a1a1a');
   } else {
-    navbar.css('color', '#d9d9d9');
+    navbarText.css('color', '#d9d9d9');
   }
 });
