@@ -139,9 +139,6 @@ icon:hover{
     z-index: 995;
     overflow: hidden;
 }
-.me-col {
-
-}
 
 .hey {
      text-align: left;
@@ -172,6 +169,7 @@ icon:hover{
 .port-rows {
     text-align: center;
     width: 100%;
+    height: 100%:
 }
 .port-styling {
     margin-top: 50%;
