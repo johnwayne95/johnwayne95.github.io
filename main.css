@@ -157,7 +157,6 @@ icon:hover{
 }
 
 .selfie {
-    height: 100%;
     width: 100%;
     margin: 0px;
     filter: grayscale(40%); 
@@ -170,22 +169,20 @@ icon:hover{
     background-color: #1a1a1a;
     position: relative;
     z-index: 996;
-    padding-top: 30px;
 }
 .port-rows {
     text-align: center;
     width: 100%;
 }
 .port-styling {
-    margin-top: 6%;
+    margin-top: 50%;
 }
 .port-text {
     font-size: 550%;
 }
 
-.webpic {
-    height: 35%;
-    width: 35%;
+#myCarousel {
+    margin-top: 70%;
 }
 
 
