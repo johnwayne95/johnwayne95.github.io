@@ -141,8 +141,7 @@ icon:hover{
     overflow: hidden;
 }
 .me-col {
-    height: 100%;
-    overflow: hidden;
+    height: 100% !important;
 }
 
 .hey {
