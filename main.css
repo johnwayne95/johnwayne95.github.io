@@ -180,7 +180,7 @@ icon:hover{
 }
 
 #myCarousel {
-    margin-top: 70%;
+    margin-top: 50%;
 }
 
 
@@ -191,13 +191,14 @@ icon:hover{
     color: #1a1a1a;
     position: relative;
     z-index: 995;
+    height: 100%;
 }
 .talk{
     text-align: center;
     font-size: 650%;
     margin-top: 50%;
     margin-bottom: 50%;
-     height: 100%;
+    height: 100%;
 
 }
 .email {
