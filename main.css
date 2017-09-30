@@ -139,7 +139,7 @@ icon:hover{
     z-index: 995;
     overflow: hidden;
 }
-.about-me-col {
+.me-col {
     height: 100%;
 }
 
@@ -162,7 +162,6 @@ icon:hover{
 
 /*PORTFOLIO STYLING*/
 .portfolio {
-    height: 100%;
     color: #d9d9d9;
     background-color: #1a1a1a;
     position: relative;
@@ -187,7 +186,6 @@ icon:hover{
 
 /*CONTACT STYLING*/
 .contact {
-    height: 100%;
     background-color: #d9d9d9;
     color: #1a1a1a;
     position: relative;
