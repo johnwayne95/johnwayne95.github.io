@@ -131,6 +131,7 @@ icon:hover{
 }
 
 /*ABOUT ME STYLING*/
+
 .about-me {
 
     background-color: #d9d9d9;
@@ -190,18 +191,21 @@ icon:hover{
     color: #1a1a1a;
     position: relative;
     z-index: 995;
-    height: 100%;
 }
 .talk{
     text-align: center;
     font-size: 650%;
     margin-top: 50%;
+    margin-bottom: 50%;
+     height: 100%;
 
 }
 .email {
     font-size: 400%;
     text-align: left;
     margin-top: 55%;
+    margin-bottom: 45%;
+     height: 100%;
 }
 
 .email a {
