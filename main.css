@@ -132,7 +132,6 @@ icon:hover{
 
 /*ABOUT ME STYLING*/
 .about-me {
-    height: 100%;
     width: 100%;
     background-color: #d9d9d9;
     color: #1a1a1a;
@@ -140,7 +139,9 @@ icon:hover{
     z-index: 995;
     overflow: hidden;
 }
-
+.about-me-col {
+    height: 100%;
+}
 
 .hey {
      text-align: left;
