@@ -141,7 +141,7 @@ icon:hover{
     overflow: hidden;
 }
 .me-col {
-    height: 100% !important;
+    height: 100%;
 }
 
 .hey {
@@ -166,7 +166,7 @@ icon:hover{
     color: #d9d9d9;
     background-color: #1a1a1a;
     position: relative;
-    z-index: 996;
+    z-index: 995;
     height: 100%;
 }
 .port-rows {
@@ -191,7 +191,7 @@ icon:hover{
     background-color: #d9d9d9;
     color: #1a1a1a;
     position: relative;
-    z-index: 997;
+    z-index: 995;
     height: 100%;
 }
 .talk{
