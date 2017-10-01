@@ -139,6 +139,7 @@ icon:hover{
     position: relative;
     z-index: 995;
     overflow: hidden;
+    height: 100%;
 }
 
 .hey {
@@ -154,7 +155,6 @@ icon:hover{
 
 .selfie {
     width: 100%;
-    height: 100%;
     margin: 0px;
     filter: grayscale(40%); 
 }
@@ -170,17 +170,33 @@ icon:hover{
 .port-rows {
     text-align: center;
     width: 100%;
-    height: 100%:
-}
-.port-styling {
-    margin-top: 50%;
-}
-.port-text {
-    font-size: 550%;
 }
 
-#myCarousel {
-    margin-top: 50%;
+.port-text {
+    font-size: 550%;
+    margin-top: 2%;
+}
+
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 1rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+.port-img {
+    height: 280px;
+    width: 356px;
 }
 
 
