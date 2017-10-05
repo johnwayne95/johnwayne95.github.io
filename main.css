@@ -90,8 +90,8 @@ icon:hover{
 
 #audiobutton {
     margin: 30px;
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
     position: relative;
     float: left;
@@ -174,21 +174,18 @@ icon:hover{
 
 .port-text {
     font-size: 550%;
-    margin-top: 2%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    line-height: 110%;
 }
 
 
 .card {
   float: left;
-  width: 33.333%;
-  padding: .75rem;
-  margin-bottom: 1rem;
+  padding: 1.1rem;
   border: 0;
 }
 
-.card > img {
-  margin-bottom: .75rem;
-}
 
 .card-text {
   font-size: 85%;
