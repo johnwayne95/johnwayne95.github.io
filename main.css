@@ -93,7 +93,7 @@ icon:hover{
     height: 30px;
     width: 30px;
     cursor: pointer;
-    position: relative;
+    position: fixed;
     float: left;
     z-index: 9999;
 }
