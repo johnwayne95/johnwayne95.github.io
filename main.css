@@ -26,23 +26,23 @@ html, body {
 }
 
 h1 {
-    font-size: 1100%;
+    font-size: 1000%;
     /*font-size: 150px;*/
     letter-spacing: 20px;
     padding: 0px;
     margin: 0px;
-    line-height: 120px;
+    line-height: 130px;
     text-indent: 20px;
 }
 
 
 h2 {
-    font-size: 220%;
+    font-size: 300%;
     /*font-size: 22px;*/
-    letter-spacing: 30px;
+    letter-spacing: 40px;
     padding: 0px;
     margin: 0px;
-    text-indent: 30px;
+    text-indent: 40px;
 }
 .outer {
     display: table;
