@@ -4,8 +4,9 @@
 }
 
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+    /* overflow: scroll;
+    overflow-x: hidden; */
+
 }
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
@@ -15,6 +16,9 @@ body {
    background-color: #1a1a1a;
     color: #d9d9d9;
     margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
 }
 
 html, body {
@@ -27,22 +31,21 @@ html, body {
 
 h1 {
     font-size: 1000%;
-    /*font-size: 150px;*/
-    letter-spacing: 20px;
+    letter-spacing: .15em;
     padding: 0px;
     margin: 0px;
-    line-height: 130px;
-    text-indent: 20px;
+    line-height: .9em; 
+    text-indent: .15em;
 }
 
 
 h2 {
     font-size: 250%;
-    /*font-size: 22px;*/
-    letter-spacing: 40px;
+    /* letter-spacing: 40px; */
+    letter-spacing: 1.1em;
     padding: 0px;
     margin: 0px;
-    text-indent: 40px;
+    text-indent: 1.1em;
 }
 .outer {
     display: table;
@@ -84,12 +87,12 @@ canvas {
 }
 
 
-icon:hover{
+.icon:hover{
     filter: brightness(150%);
 }
 
 #audiobutton {
-    margin: 30px;
+    margin: 20px;
     height: 30px;
     width: 30px;
     cursor: pointer;
@@ -109,20 +112,22 @@ icon:hover{
     background-color: transparent;
     z-index: 9998;
     border: 0;
-    font-size: 16px !important;
-    line-height: 2 !important;
-    letter-spacing: 5px;
+    font-size: 110% !important;
+    /* line-height: 2 !important; */
+    letter-spacing: .3em;
     border-radius: 0;
-    margin-top: 15px;
+    padding-top: 10px;
     text-align: right;
 }
 
 .navbar li {
     margin-right: 45px;
+    
 }
 
 .nav.navbar-nav.navbar-right li a {
     color: #d9d9d9;
+    transition: color 0.5s linear;
 }
 
 .navbar-nav li a:hover{
@@ -131,54 +136,72 @@ icon:hover{
 
 /*ABOUT ME STYLING*/
 
+
 .about-me {
 
     background-color: #d9d9d9;
     color: #1a1a1a;
     position: relative;
     z-index: 995;
-    overflow: hidden;
-    height: 900px;
+    min-height: 100%;
 }
 
+
 .hey {
-     text-align: left;
+    text-align: left;
     font-size: 650%;
-    margin-top: 40%;
     line-height: 70%;
     letter-spacing: 5px;
+    height: 100%;
+    margin-top: 30%;
 }
 
 .what-i-am {
     font-size: 200%;
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.selfie-cont {
+    height: 100%;
 }
 
 .selfie {
     width: 85%;
-    margin-top: 30%;
+    margin-top: 20%;
     filter: grayscale(25%); 
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/*PORTFOLIO STYLING*/
-.portfolio {
+/*RESUME STYLING*/
+.resume {
     color: #d9d9d9;
     background-color: #1a1a1a;
     position: relative;
     z-index: 995;
-    height: 900px;
-}
-.port-rows {
-    text-align: center;
-    width: 100%;
+    min-height: 100%;
 }
 
 .port-text {
+    text-align: center;
     font-size: 650%;
     margin-top: 4%;
     line-height: 110%;
     letter-spacing: 5px;
     text-indent: 5px;
+}
+
+.driveresume {
+    display: block;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    border: 0; 
+    margin-bottom: 5%; 
+    height: 90vh;
 }
 
 
@@ -189,7 +212,7 @@ icon:hover{
     color: #1a1a1a;
     position: relative;
     z-index: 995;
-    height: 100%;
+    min-height: 105%;
 }
 .talk{
     text-align: center;
@@ -200,10 +223,10 @@ icon:hover{
 }
 .email {
     font-size: 400%;
-    text-align: left;
+    text-align: middle;
     margin-top: 55%;
     margin-bottom: 45%;
-     height: 100%;
+    height: 100%;
 }
 
 .email a {

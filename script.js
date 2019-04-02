@@ -57,7 +57,7 @@ function onWindowResize() {
 //AUDIO BUTTON
 function audioButton() {
   if (audiobutton.classList.contains('play')) {
-    if (($(window).scrollTop() >= about && $(window).scrollTop() < portfolio) || ($(window).scrollTop() >= contact)) {
+    if (($(window).scrollTop() >= about && $(window).scrollTop() < resume) || ($(window).scrollTop() >= contact)) {
       audiobutton.src = './icons/pausegray.png';
     } else {
       audiobutton.src = './icons/pause.png';
@@ -67,7 +67,7 @@ function audioButton() {
     audio.play();
 
   } else {
-    if (($(window).scrollTop() >= about && $(window).scrollTop() < portfolio) || ($(window).scrollTop() >= contact)) {
+    if (($(window).scrollTop() >= about && $(window).scrollTop() < resume) || ($(window).scrollTop() >= contact)) {
       audiobutton.src = './icons/playgray.png';
     } else {
       audiobutton.src = './icons/play.png';
@@ -83,7 +83,7 @@ function audioButton() {
 
 //SCROLL SMOOTHNESS 
 // Add smooth scrolling to all links in navbar + footer link
-$(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+$(".navbar a").on('click', function (event) {
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
     // Prevent default anchor click behavior
@@ -93,13 +93,11 @@ $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
     var hash = this.hash;
 
     // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    // The optional numberpecifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
       scrollTop: $(hash).offset().top
     }, 650, function () {
 
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
     });
   } // End if
 });
@@ -118,20 +116,20 @@ $(window).scroll(function () {
 
 //CHANGE NAVBAR COLOR WHEN SCROLL
 var about = $('.about-me').offset().top;
-var portfolio = $('.portfolio').offset().top;
-var contact = $('.contact').offset().top;
+var resume = $('.resume').offset().top - 30;
+var contact = $('.contact').offset().top - 30;
 var navbarText = $('.nav.navbar-nav.navbar-right li a');
 var navbar = $('.navbar');
 
 $(document).scroll(function () {
-  if ($(window).scrollTop() >= about && $(window).scrollTop() < portfolio) {
+  if ($(window).scrollTop() >= about && $(window).scrollTop() < resume) {
     navbarText.css('color', '#1a1a1a');
     if (audiobutton.classList.contains('play')) {
       audiobutton.src = './icons/playgray.png';
     } else {
       audiobutton.src = './icons/pausegray.png';
     }
-  } else if ($(window).scrollTop() >= portfolio && $(window).scrollTop() < contact) {
+  } else if ($(window).scrollTop() >= resume && $(window).scrollTop() < contact) {
     navbarText.css('color', '#d9d9d9');
     if (audiobutton.classList.contains('play')) {
       audiobutton.src = './icons/play.png';
